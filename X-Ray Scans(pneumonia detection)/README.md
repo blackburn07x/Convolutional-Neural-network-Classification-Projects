@@ -11,4 +11,4 @@ For the analysis of chest x-ray images, all chest radiographs were initially scr
 
 ## About the files
 
-![Image](relative/path/to/img.jpg?raw=true "Title")
+![Image](utils/Capture.png?raw=true "Title")
