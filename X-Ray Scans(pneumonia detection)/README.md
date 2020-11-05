@@ -1,6 +1,7 @@
 # X-Ray Scans(pneumonia detection) 
 
 #### The dataset used is this [Kaggle Dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)
+![Capture.PNG](utils/Capture.PNG?raw=true "Title")
 
 ### About the Dataset
 The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
@@ -11,4 +12,11 @@ For the analysis of chest x-ray images, all chest radiographs were initially scr
 
 ## About the files
 
-![Image](utils/Capture.png?raw=true "Title")
+- Chest_X_Ray_Images_(Pneumonia).ipynb : __Jupyter Notebook containing Convolution Neural network build using Tensorflow low level API (tensorflow 1.x)
+
+- chest_x_ray_images_(pneumonia) : __Python file containing Convolution Neural network build using Tensorflow low level API (tensorflow 1.x)
+
+## Network Architechure (from TensorBoard)
+![Capture.PNG](utils/Capture.PNG?raw=true "Title")
+
+
