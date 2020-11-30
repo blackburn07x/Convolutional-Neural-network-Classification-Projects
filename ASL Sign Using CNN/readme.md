@@ -16,6 +16,8 @@ The test data set contains a mere 29 images, to encourage the use of real-world 
 
 **ASL.ipynb** : Jupyter Notebook for Processing Images, creating a Convolutional Neural Network, Training the Network and calculating Loss and Accuracy.
 
+**ASL using Tensorflow.py** : This **.py** file contains the same code as in **ASL.ipynb**
+
 ### Result
 
 ***Loss and Accuracy :***
