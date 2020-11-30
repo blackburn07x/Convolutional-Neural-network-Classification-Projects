@@ -11,3 +11,14 @@ The training data set contains 87,000 images which are 200x200 pixels. There are
 These 3 classes are very helpful in real-time applications, and classification.
 The test data set contains a mere 29 images, to encourage the use of real-world test images.(NOTE : About and Content taken from the Dataset Website)
 
+![asl.jpg](asl.jpg?raw=true "Title")
+### File
+
+**ASL.ipynb** : Jupyter Notebook for Processing Images, creating a Convolutional Neural Network, Training the Network and calculating Loss and Accuracy.
+
+### Result
+
+***Loss and Accuracy :***
+
+![loss.PNG](loss.PNG?raw=true)
+
