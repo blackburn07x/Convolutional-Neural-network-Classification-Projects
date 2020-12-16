@@ -195,7 +195,7 @@ class VGG16net:
             fc3w = self.weights["fc8_W"]
             fc3b = self.weights['fc8_b']
             self.fc3 = tf.nn.relu(tf.nn.bias_add(tf.matmul(self.fc2, fc3w), fc3b))
-        print("\n IMAGE PASS SUCCESSFUL,FUCK YEAH!")
+        print("\n IMAGE PASS SUCCESSFUL,HELL YEAH!")
 
 
 # PASSING DUMMY IMAGE FOR TESTING
