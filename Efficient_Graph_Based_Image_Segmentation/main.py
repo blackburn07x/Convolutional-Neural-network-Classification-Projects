@@ -35,14 +35,13 @@ def segment(graph,vertices,k=300):
             threshold[p] = weight(edge) + tau(k,ds.size[p])
     return ds
 
-def remove_small_component(ufset, graph, min_size):
+def remove_small_component(ds, graph, min_size):
     sort_graph = sorted(graph, key=lambda item: item[2])
     for edge in sort_graph:
-        u = ufset.find(edge[0])
-        v = ufset.find(edge[1])
+        u = ds.find(edge[0])
+        v = ds.find(edge[1])
 
-        if u != v:
-            if ufset.size[u] < min_size or ufset.size[v] < min_size:
+        if u != v and  ds.size[u] < min_size or ds.size[v] < min_size:
                 ufset.union(u, v)
 
     return ufset
@@ -59,9 +58,9 @@ def generate_image(ds,width,height):
 
 #run
 graph = image_graph(img,height,width)
-seg = segment(graph,height*width,k=300)
-seg = remove_small_component(seg,graph,50)
-generated_image = generate_image(seg,width,height)
+ds = segment(graph,height*width,k=300)
+ds = remove_small_component(ds,graph,50)
+generated_image = generate_image(ds,width,height)
 plt.imshow(generated_image)
 plt.show()
 
