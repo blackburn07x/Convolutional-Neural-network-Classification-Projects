@@ -5,9 +5,12 @@
 **Paper Link :** [http://cs.brown.edu/~pff/papers/seg-ijcv.pdf](http://cs.brown.edu/~pff/papers/seg-ijcv.pdf)
 
 ## Result :
-*Input Image:*
+*Input Image:*<br/>
+
 ![alt text](image/tom.jpg)
-*Output Image:*
+
+*Output Image:*<br/>
+
 ![alt text](image/seg_tom.PNG)
 
 
