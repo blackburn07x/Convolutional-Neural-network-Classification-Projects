@@ -20,7 +20,7 @@ from tensorflow.keras.datasets import mnist
 # summarize loaded dataset
 print('Train: X=%s, y=%s' % (trainX.shape, trainy.shape))
 print('Test: X=%s, y=%s' % (testX.shape, testy.shape))
-
+#preprocess Dataset
 trainX=np.float32(trainX)
 testX = np.float32(testX)
 
@@ -30,16 +30,21 @@ testX = np.reshape(testX,(-1,28,28,1))
 trainy = to_categorical(trainy)
 testy = to_categorical(testy)
 
+#BUILD ETWORK
 res = Resnet50(X)
 outs,preds = res.build_network_(X)
 learning_rate = 1e-4
+
+#CALCULATE LOSS
 entropy = tf.nn.softmax_cross_entropy_with_logits(logits = preds,labels = Y)
 loss = tf.reduce_mean(entropy)
 
+#CALCULATE ACCURACY
 c_p = tf.equal(tf.argmax(preds,1),tf.argmax(Y,1))
 accuracy = tf.reduce_mean(tf.cast(c_p,tf.float32))
 #Optimizer
 optimizer = tf.train.AdamOptimizer(learning_rate).minimize(loss)
+
 
 def mini_batches(train_images,train_labels,batch_size=128):
     m = len(train_images)
